@@ -4,7 +4,7 @@ export default function Navbar({ page }) {
   const navigate = useNavigate();
   return (
     <>
-      <div className="flex justify-between items-center bg-[#7d7d7d] py-3 px-16">
+      <div className="flex justify-between items-center bg-[#7d7d7d] py-3 px-16 fixed w-screen">
         <div className="flex items-center">
           <img
             className="rounded-full w-12 mr-3"
