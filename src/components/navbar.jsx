@@ -21,10 +21,10 @@ export default function Navbar({ page }) {
             src="./voucher.jpg"
             alt="logo_voucher"
           />
-          <h2 className="text-lg font-bold">Voucher</h2>
+          <h2 className="text-2xl font-bold">Voucher</h2>
         </div>
         <div className="hidden md:block">
-          <h1 className="text-lg font-bold">Judul</h1>
+          <h1 className="text-2xl font-bold">Judul</h1>
         </div>
         <div>
           <button
@@ -56,8 +56,31 @@ export default function Navbar({ page }) {
               <h2 className="py-2 px-3 rounded border border-black">mun</h2>
             </div>
           </div>
+          <button>Log Out</button>
         </div>
       )}
+      <div className="hidden md:fixed md:w-1/4 md:h-screen md:grid md:items-center md:mt-7">
+        <div className="h-5/6 bg-[#d9d9d9] py-14 px-5 rounded-md">
+          <div className="flex justify-around items-center">
+            <h2 className="text-lg font-bold mb-5">Categories</h2>
+          </div>
+          <div className="p-7 w-full">
+            <div className="flex justify-between">
+              <button className="py-2 w-3/4 rounded border border-black mr-5">
+                Category 1
+              </button>
+              <h2 className="py-2 w-1/4 text-center rounded border border-black">
+                mun
+              </h2>
+            </div>
+          </div>
+          <div className="flex justify-center mt-12">
+            <button className="py-3 px-5 rounded bg-[#878787] hover:bg-black hover:text-white">
+              Log Out
+            </button>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
