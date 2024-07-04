@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <>
       <Navbar page="history" />
-      {/* <h1 className="text-center">Page Home</h1> */}
       <div className="flex px-3 pt-24">
         <div
           style={{ height: "80vh" }}
