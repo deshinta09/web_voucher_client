@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import Swal from "sweetalert2";
 import instance from "../config/instance";
+import axios from "axios";
 
 export const categorySlice = createSlice({
   name: "category",
@@ -19,9 +20,9 @@ export const { setCategory } = categorySlice.actions;
 export const fetchCategory = () => {
   return async (dispatch) => {
     try {
-      let { data } = await instance({
+      let { data } = await axios({
         method: "get",
-        url: "/categories",
+        url: "http://localhost:3000/categories",
         headers: {
           Authorization: `Bearer ${localStorage.access_token}`,
         },

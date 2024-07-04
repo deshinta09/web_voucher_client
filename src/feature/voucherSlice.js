@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import Swal from "sweetalert2";
 import instance from "../config/instance";
+import axios from "axios";
 
 export const voucherSlice = createSlice({
   name: "voucher",
@@ -19,9 +20,10 @@ export const { setVoucher } = voucherSlice.actions;
 export const fetchVoucher = (filter) => {
   return async (dispatch) => {
     try {
-      let { data } = await instance({
+      let option = filter ? `?filter=${filter}` : "";
+      let { data } = await axios({
         method: "get",
-        url: `/voucher?filter=${filter}`,
+        url: `http://localhost:3000/voucher${option}`,
         headers: { Authorization: `Bearer ${localStorage.access_token}` },
       });
       dispatch(setVoucher(data));

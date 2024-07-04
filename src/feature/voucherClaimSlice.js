@@ -16,12 +16,14 @@ export const voucherClaimSlice = createSlice({
 
 export const { setVoucherClaim } = voucherClaimSlice.actions;
 
-export const fetchVoucherClaim = () => {
+export const fetchVoucherClaim = (filter) => {
   return async (dispatch) => {
     try {
+      console.log(filter, "<< filter");
+      let option = filter ? `?filter=${filter}` : "";
       let { data } = await instance({
         method: "get",
-        url: "/voucherClaim",
+        url: `http://localhost:3000/voucherClaim${option}`,
         headers: { Authorization: `Bearer ${localStorage.access_token}` },
       });
       dispatch(setVoucherClaim(data));
