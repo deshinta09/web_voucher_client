@@ -10,6 +10,7 @@ export default function Card({ data }) {
       await axios({
         method: "post",
         url: `http://localhost:3000/voucherClaim/${id}`,
+        headers: { Authorization: `Bearer ${localStorage.access_token}` },
       });
       Swal.fire({
         title: "Success",
