@@ -1,11 +1,11 @@
 export default function Card() {
   return (
     <>
-      <div className="w-72 rounded p-2 shadow-md">
+      <div className="w-80 h-64 rounded p-2 shadow-md">
         <img
-          className="w-screen rounded border-2 border-[#d9d9d9]"
+          className="w-screen h-3/5 rounded border-2 border-[#d9d9d9] bg-cover"
           src="./voucher.jpg"
-          alt=""
+          alt="voucher-img"
         />
         <div className="flex justify-between items-center px-3 mt-3">
           <div>

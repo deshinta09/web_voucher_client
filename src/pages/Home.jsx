@@ -5,28 +5,25 @@ export default function Home() {
   return (
     <>
       <Navbar page="history" />
-      <div className="flex px-3 pt-24">
-        <div
-          style={{ height: "80vh" }}
-          className="w-1/5 bg-[#d9d9d9] p-3 grid gap-4 content-center rounded-md fixed"
-        >
-          <div>
-            <h1 className="py-3 px-6 border border-black rounded block m-auto text-center">
-              Category
-            </h1>
-          </div>
-          <div className="flex mr-5">
-            <h1 className="py-2 px-6 border border-black rounded block m-auto mt-10">
-              Category 1
-            </h1>
-            <h1 className="py-2 px-6 border border-black rounded block m-auto mt-10">
-              num
-            </h1>
+      <div className="flex">
+        <div className="hidden md:fixed md:w-1/4 md:h-screen md:grid md:items-center md:mt-7">
+          <div className="h-5/6 bg-[#d9d9d9] py-14 px-5 rounded-md">
+            <div className="flex justify-around items-center">
+              <h2 className="text-lg font-bold mb-5">Categories</h2>
+            </div>
+            <div className="py-3 px-4">
+              <div className="flex justify-between">
+                <button className="py-2 px-3 rounded border border-black">
+                  Category 1
+                </button>
+                <h2 className="py-2 px-3 rounded border border-black">mun</h2>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="pl-72 pr-5 w-screen px-14">
-          <h1 className="text-md pb-3 block font-bold">Vouchers</h1>
-          <div className="grid grid-cols-3 gap-4">
+        <div className="px-5 pt-20 md:pl-96 w-full">
+          <h1 className="px-10 text-xl pb-5 font-bold md:text-2xl">Vouchers</h1>
+          <div className="grid justify-center md:grid-cols-3 gap-3 px-7">
             <Card />
             <Card />
             <Card />
