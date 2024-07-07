@@ -53,8 +53,8 @@ export default function Navbar({ page }) {
   }, [filter]);
 
   useEffect(() => {
-    dispatch(fetchCategory());
     page === "Home" ? myCategories() : "";
+    page === "history" ? dispatch(fetchCategory()) : "";
   }, []);
 
   return (
