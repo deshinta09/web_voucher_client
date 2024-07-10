@@ -39,7 +39,7 @@ export default function Login() {
   return (
     <>
       <div className="h-screen flex justify-center items-center">
-        <div className="bg-[#d9d9d9] p-7 md:p-10 shadow-md rounded h-3/5 md:h-2/4">
+        <div className="bg-[#d9d9d9] p-7 md:p-10 shadow-md rounded h-3/5 md:h-1/3">
           <h1 className="text-center mb-14 md:mb-8 md:text-2xl text-xl font-semibold">
             Page Login
           </h1>

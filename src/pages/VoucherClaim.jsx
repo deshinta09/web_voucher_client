@@ -41,38 +41,43 @@ export default function VoucherClaim() {
   return (
     <>
       <Navbar page="Home" />
-      <div className="pt-20 md:pl-[35rem] w-full">
-        <h1 className="px-10 text-xl pb-5 font-bold md:text-2xl">My Voucher</h1>
-        <div className="py-5 px-7">
-          <table className="w-full rounded border">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody className="border p-2">
-              {allClaim.map((el) => (
-                <tr key={el.id}>
-                  <td className="flex gap-3 items-center">
-                    <img
-                      className="rounded-full w-10 mr-3"
-                      src={el.Voucher?.image}
-                      alt="image_voucher"
-                    />
-                    <h1>{el.Voucher?.name}</h1>
-                  </td>
-                  <td>
-                    <FontAwesomeIcon
-                      className="cursor-pointer"
-                      onClick={() => deleteVoucher(el.id)}
-                      icon={faTrash}
-                    />
-                  </td>
+      <div className="pt-20 px-7 flex md:w-screen">
+        <div className="md:w-1/4 md:h-screen"></div>
+        <div className="md:w-3/4 md:ml-10">
+          <h1 className="px-10 text-xl pb-5 font-bold md:text-2xl">
+            My Voucher
+          </h1>
+          <div className="md:py-5 md:px-7">
+            <table className="w-screen rounded border">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Action</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="border p-2">
+                {allClaim.map((el) => (
+                  <tr key={el.id}>
+                    <td className="flex gap-3 items-center">
+                      <img
+                        className="rounded-full w-10 mr-3"
+                        src={el.Voucher?.image}
+                        alt="image_voucher"
+                      />
+                      <h1>{el.Voucher?.name}</h1>
+                    </td>
+                    <td>
+                      <FontAwesomeIcon
+                        className="cursor-pointer"
+                        onClick={() => deleteVoucher(el.id)}
+                        icon={faTrash}
+                      />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       {/* <div className="flex">

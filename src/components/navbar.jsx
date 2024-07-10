@@ -53,8 +53,7 @@ export default function Navbar({ page }) {
   }, [filter]);
 
   useEffect(() => {
-    page === "Home" ? myCategories() : "";
-    page === "history" ? dispatch(fetchCategory()) : "";
+    page === "history" ? dispatch(fetchCategory()) : myCategories();
   }, []);
 
   return (
@@ -108,7 +107,7 @@ export default function Navbar({ page }) {
                   {el.category}
                 </button>
                 <h2 className="py-2 px-3 rounded border border-black w-1/5">
-                  {el.num ? el.num : 1}
+                  {el.num}
                 </h2>
               </div>
             ))}
@@ -128,7 +127,7 @@ export default function Navbar({ page }) {
           </div>
           <div className="p-7 w-full">
             {categories.map((el, i) => (
-              <div key={i} className="flex justify-between">
+              <div key={i} className="flex justify-between mb-5">
                 <button
                   className="py-2 w-3/4 rounded border border-black mr-5 hover:bg-black hover:text-white"
                   onClick={() => setFilter(el.category)}
@@ -136,7 +135,7 @@ export default function Navbar({ page }) {
                   {el.category}
                 </button>
                 <h2 className="py-2 w-1/4 text-center rounded border border-black">
-                  {el.num ? el.num : 1}
+                  {el.num}
                 </h2>
               </div>
             ))}
